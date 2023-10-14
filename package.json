@@ -1,8 +1,9 @@
 {
-  "name": "gocord",
-  "devDependencies": { "unocss": "^0.56.5" },
-  "scripts": {
-    "dev": "bunx unocss --watch",
-    "build": "bunx unocss"
-  }
+	"name": "gocord",
+	"devDependencies": { "unocss": "^0.56.5" },
+	"scripts": {
+		"dev": "bunx unocss --watch",
+		"go:dev": "gow -e=go,mod,html,css,js run .",
+		"build": "bunx unocss"
+	}
 }
