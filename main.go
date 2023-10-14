@@ -4,19 +4,22 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/template/handlebars/v2"
+	"github.com/gofiber/template/html/v2"
 )
 
 func main() {
+	engine := html.New("./views", ".html")
 	app := fiber.New(fiber.Config{
-		Views: handlebars.New("./views", ".hbs"),
+		Views: engine,
 	})
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.Render("index", fiber.Map{
 			"Title": "Hello World",
-		})
+		}, "layouts/root")
 	})
+
+	app.Static("/", "./static")
 
 	log.Fatal(app.Listen(":3000"))
 }
