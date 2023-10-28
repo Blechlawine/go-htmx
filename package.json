@@ -3,7 +3,7 @@
 	"devDependencies": { "unocss": "^0.56.5" },
 	"scripts": {
 		"dev": "bunx unocss --watch",
-		"go:dev": "gow -e=go,mod,html,css,js run .",
+		"go:dev": "gow -e=go,mod,html,css,js run ./src/main.go",
 		"build": "bunx unocss"
 	}
 }

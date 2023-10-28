@@ -2,11 +2,11 @@ import { defineConfig, presetUno } from "unocss";
 
 export default defineConfig({
 	content: {
-		filesystem: ["views/**/*.html"],
+		filesystem: ["src/views/**/*.templ"],
 	},
 	cli: {
 		entry: {
-			patterns: ["views/**/*.html"],
+			patterns: ["src/views/**/*.templ"],
 			outFile: "static/uno.css",
 		},
 	},

@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"dev": {
+			"command": "bunx unocss && go build ./src/main.go && ./main",
+			"watch": ["src"]
+		}
+	}
+}
